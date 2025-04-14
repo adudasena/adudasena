@@ -1,4 +1,4 @@
-<h1 align="center">Linguagens Mais Usadas 🩷</h1>
+<h2 align="center">Linguagens utilizadas por mim. 🩷</h2>
 
 <div align="center">
 
