@@ -1,0 +1,31 @@
+name: Generate Pacman Contribution Graph
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Roda todo dia à meia-noite (UTC)
+  workflow_dispatch: # Permite rodar manualmente também
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate SVG
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate Pacman Contribution Graph
+        uses: yassinebridi/pacman-contribution-graph@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload generated files to output branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git fetch
+          git checkout -B output
+          mv pacman-contribution-graph.svg pacman-contribution-graph.svg
+          mv pacman-contribution-graph-dark.svg pacman-contribution-graph-dark.svg
+          git add pacman-contribution-graph.svg pacman-contribution-graph-dark.svg
+          git commit -m "update pacman graph"
+          git push -f origin output
