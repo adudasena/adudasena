@@ -1,0 +1,8 @@
+# Ignora arquivos de configuração, IDEs e build
+*.html linguist-detectable=false
+.idea/ linguist-vendored
+build/ linguist-vendored
+out/ linguist-vendored
+target/ linguist-vendored
+*.class linguist-generated
+*.jar linguist-generated
