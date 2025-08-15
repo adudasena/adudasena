@@ -1,0 +1,43 @@
+name: Update languages by repo
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # toda segunda às 03:00 UTC
+  workflow_dispatch:       # permite rodar manualmente no GitHub
+  push:
+    paths:
+      - "scripts/update_langs_by_repo.py"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # necessário para commitar no próprio repo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run updater
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # opcional, aumenta limite de API
+        run: python scripts/update_langs_by_repo.py
+
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update languages by repo"
+            git push
+          else
+            echo "Nada para commitar."
+          fi
