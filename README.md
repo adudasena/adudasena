@@ -18,9 +18,7 @@
 <br clear="both">
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adudasena&show_icons=true&include_all_commits=true
-&count_private=false&theme=radical
-&locale=pt-br&hide_border=false&cache_seconds=30" height="150"  alt="Estatísticas GitHub" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adudasena&show_icons=true&include_all_commits=true&count_private=true&theme=radical&locale=pt-br&hide_border=false&cache_seconds=30" height="150" alt="Estatísticas GitHub" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=adudasena&layout=compact&langs_count=100&theme=radical&hide_border=true&locale=pt-br&cache_seconds=30" height="150" alt="Linguagens mais usadas" />
 
 </div>
