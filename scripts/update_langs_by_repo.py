@@ -40,13 +40,11 @@ def list_repos(username):
     return repos
 
 def count_by_language(repos):
-    # usa a linguagem principal do repo (campo 'language')
-    langs = [r.get("language") or "Outros"]  # placeholder preenchido abaixo
-    # O acima só “cria” a lista; vamos montar correto:
+    # conta 1 repo = 1 ponto pela linguagem principal
     langs = []
     for r in repos:
         lang = r.get("language")
-        if lang is None or str(lang).strip() == "":
+        if not lang or str(lang).strip() == "":
             lang = "Outros"
         langs.append(lang)
     return Counter(langs)
