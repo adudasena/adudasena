@@ -19,9 +19,9 @@ Atualmente estudo e pratico:
 
 * Desenvolvimento Web com HTML, CSS e JavaScript
 
-* React, focando em componentes, estados, rotas e integrações com APIs
+* Front moderno com React (componentes, estados, rotas e integração com APIs)
 
-* Backend, lógica, APIs REST e boas práticas
+* Backend, lógica de negócio, APIs REST e boas práticas
 
 Também participo de um grupo de pesquisa em Inteligência Artificial, explorando fundamentos e aplicações modernas de IA em projetos acadêmicos.
 
