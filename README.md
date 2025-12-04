@@ -1,6 +1,6 @@
 <br>
 
-<h1 align="center"> Olá! Eu sou a Maria Eduarda Sena! </h1>
+<h1 align="center"> Olá! Eu sou a Maria Eduarda Sena. </h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=2000&color=9A7BFF&center=true&vCenter=true&width=500&lines=Desenvolvedora+em+Evolução;Estudante+de+Ciência+da+Computação;Apaixonada+por+Tecnologia" />
@@ -8,7 +8,7 @@
 
 ---
 
-## Sobre mim
+## 💜 Sobre mim
 
 Estudante de Ciência da Computação, apaixonada por tecnologia e em transição da infraestrutura para o desenvolvimento.
 Tenho me aprofundado em frontend e backend, criando projetos completos e evoluindo minhas habilidades todos os dias.
